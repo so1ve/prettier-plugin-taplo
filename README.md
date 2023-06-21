@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/prettier-plugin-taplo?color=a1b858&label=)](https://www.npmjs.com/package/prettier-plugin-taplo)
 
-## 💎 Features
+Use [taplo](https://taplo.tamasfe.dev) to format your TOML files with [Prettier](https://prettier.io).
 
 ## 📦 Installation
 
