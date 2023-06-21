@@ -1,17 +1,17 @@
 {
-  "name": "pkg-name",
+  "name": "prettier-plugin-taplo",
   "version": "0.0.0",
   "packageManager": "pnpm@8.6.3",
   "author": "Ray <i@mk1.io> (@so1ve)",
   "description": "",
   "keywords": [],
-  "homepage": "https://github.com/so1ve/pkg-name#readme",
+  "homepage": "https://github.com/so1ve/prettier-plugin-taplo#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/so1ve/pkg-name.git"
+    "url": "git+https://github.com/so1ve/prettier-plugin-taplo.git"
   },
   "bugs": {
-    "url": "https://github.com/so1ve/pkg-name/issues"
+    "url": "https://github.com/so1ve/prettier-plugin-taplo/issues"
   },
   "license": "MIT",
   "sideEffects": false,

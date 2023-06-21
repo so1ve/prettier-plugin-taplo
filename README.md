@@ -1,15 +1,15 @@
-# pkg-name
+# prettier-plugin-taplo
 
-[![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/pkg-name)
+[![NPM version](https://img.shields.io/npm/v/prettier-plugin-taplo?color=a1b858&label=)](https://www.npmjs.com/package/prettier-plugin-taplo)
 
 ## 💎 Features
 
 ## 📦 Installation
 
 ```bash
-$ npm install pkg-name
-$ yarn add pkg-name
-$ pnpm add pkg-name
+$ npm install prettier-plugin-taplo -D
+$ yarn add prettier-plugin-taplo -D
+$ pnpm add prettier-plugin-taplo -D
 ```
 
 ## 🚀 Usage
