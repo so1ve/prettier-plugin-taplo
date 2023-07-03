@@ -5,11 +5,11 @@
   "author": "Ray <i@mk1.io> (@so1ve)",
   "description": "Use taplo to format your TOML files with prettier.",
   "keywords": [
-    "toml",
-    "taplo",
-    "prettier",
     "format",
-    "formatter"
+    "formatter",
+    "prettier",
+    "taplo",
+    "toml"
   ],
   "homepage": "https://github.com/so1ve/prettier-plugin-taplo#readme",
   "repository": {
