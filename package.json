@@ -73,7 +73,7 @@
     "tsx": "^3.12.7",
     "typescript": "^5.0.4",
     "vite": "^4.3.5",
-    "vitest": "^0.32.0"
+    "vitest": "^0.34.0"
   },
   "peerDependencies": {
     "prettier": "^2.8.8"
