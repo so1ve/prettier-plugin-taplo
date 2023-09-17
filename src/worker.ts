@@ -4,9 +4,9 @@ import { runAsWorker } from "synckit";
 let taplo: Taplo | null = null;
 
 runAsWorker(async (code: string) => {
-  if (!taplo) {
-    taplo = await Taplo.initialize();
-  }
+	if (!taplo) {
+		taplo = await Taplo.initialize();
+	}
 
-  return taplo.format(code);
+	return taplo.format(code);
 });

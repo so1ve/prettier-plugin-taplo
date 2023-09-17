@@ -15,6 +15,7 @@ $ pnpm add prettier-plugin-taplo -D
 ## 🚀 Usage
 
 ```ts
+
 ```
 
 ## 📝 License

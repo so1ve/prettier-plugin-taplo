@@ -1,82 +1,82 @@
 {
-  "name": "prettier-plugin-taplo",
-  "version": "0.0.1",
-  "packageManager": "pnpm@8.7.5",
-  "author": "Ray <i@mk1.io> (@so1ve)",
-  "description": "Use taplo to format your TOML files with prettier.",
-  "keywords": [
-    "toml",
-    "taplo",
-    "prettier",
-    "format",
-    "formatter"
-  ],
-  "homepage": "https://github.com/so1ve/prettier-plugin-taplo#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/so1ve/prettier-plugin-taplo.git"
-  },
-  "bugs": {
-    "url": "https://github.com/so1ve/prettier-plugin-taplo/issues"
-  },
-  "license": "MIT",
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "default": "./dist/index.cjs",
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs"
-    },
-    "./worker": {
-      "require": "./dist/worker.cjs"
-    }
-  },
-  "main": "./dist/index.cjs",
-  "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "build": "pkgroll",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepublishOnly": "nr build",
-    "release": "bumpp --commit --push --tag && pnpm publish",
-    "start": "tsx src/index.ts",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit",
-    "watch": "pkgroll --watch"
-  },
-  "dependencies": {
-    "@taplo/lib": "0.4.0-alpha.2",
-    "synckit": "^0.8.5"
-  },
-  "devDependencies": {
-    "@antfu/ni": "^0.21.3",
-    "@so1ve/eslint-config": "^0.106.0",
-    "@types/node": "^18.16.6",
-    "@types/prettier": "^2.7.3",
-    "bumpp": "^9.1.0",
-    "eslint": "^8.40.0",
-    "pkgroll": "^1.10.0",
-    "prettier": "^2.8.8",
-    "tsx": "^3.12.7",
-    "typescript": "^5.0.4",
-    "vite": "^4.3.5",
-    "vitest": "^0.32.0"
-  },
-  "peerDependencies": {
-    "prettier": "^2.8.8"
-  }
+	"name": "prettier-plugin-taplo",
+	"version": "0.0.1",
+	"packageManager": "pnpm@8.7.5",
+	"author": "Ray <i@mk1.io> (@so1ve)",
+	"description": "Use taplo to format your TOML files with prettier.",
+	"keywords": [
+		"format",
+		"formatter",
+		"prettier",
+		"taplo",
+		"toml"
+	],
+	"homepage": "https://github.com/so1ve/prettier-plugin-taplo#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/so1ve/prettier-plugin-taplo.git"
+	},
+	"bugs": {
+		"url": "https://github.com/so1ve/prettier-plugin-taplo/issues"
+	},
+	"license": "MIT",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.cjs",
+			"default": "./dist/index.cjs"
+		},
+		"./worker": {
+			"require": "./dist/worker.cjs"
+		}
+	},
+	"main": "./dist/index.cjs",
+	"types": "./dist/index.d.ts",
+	"typesVersions": {
+		"*": {
+			"*": [
+				"./dist/*",
+				"./dist/index.d.ts"
+			]
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "pkgroll",
+		"lint": "eslint . && prettier . --check",
+		"lint:fix": "eslint . --fix && prettier . --write",
+		"prepublishOnly": "nr build",
+		"release": "bumpp --commit --push --tag && pnpm publish",
+		"start": "tsx src/index.ts",
+		"test": "vitest",
+		"typecheck": "tsc --noEmit",
+		"watch": "pkgroll --watch"
+	},
+	"dependencies": {
+		"@taplo/lib": "0.4.0-alpha.2",
+		"synckit": "^0.8.5"
+	},
+	"devDependencies": {
+		"@antfu/ni": "^0.21.8",
+		"@so1ve/eslint-config": "^0.121.4",
+		"@so1ve/prettier-config": "^0.121.4",
+		"@types/node": "^18.17.17",
+		"bumpp": "^9.2.0",
+		"eslint": "^8.49.0",
+		"pkgroll": "^1.11.0",
+		"prettier": "^3.0.3",
+		"tsx": "^3.12.10",
+		"typescript": "^5.2.2",
+		"vite": "^4.4.9",
+		"vitest": "^0.34.4"
+	},
+	"peerDependencies": {
+		"prettier": "^3.0.0"
+	}
 }
