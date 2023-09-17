@@ -23,6 +23,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
+      "default": "./dist/index.cjs",
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs"
     },
