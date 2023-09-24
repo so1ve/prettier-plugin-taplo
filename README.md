@@ -15,8 +15,34 @@ $ pnpm add prettier-plugin-taplo -D
 ## 🚀 Usage
 
 ```ts
-
+// .prettierrc.js
+module.exports = {
+	plugins: [
+		// Add this plugin to your prettier config
+		"prettier-plugin-taplo",
+	],
+};
 ```
+
+## 🎶 Options
+
+```ts
+// .prettierrc.js
+module.exports = {
+	taploAlignEntries: false,
+	taploAlignComments: true,
+	taploArrayAutoExpand: true,
+	taploArrayAutoCollapse: true,
+	taploCompactArrays: true,
+	taploCompactInlineTables: false,
+	taploCompactEntries: false,
+	taploIndentTables: false,
+	taploIndentEntries: false,
+	taploReorderKeys: false,
+};
+```
+
+Checkout [`./src/options.ts`](./src/options.ts) for more information.
 
 ## 📝 License
 
