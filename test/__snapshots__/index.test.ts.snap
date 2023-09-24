@@ -1,7 +1,25 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`should > format 1`] = `
+exports[`should > format with custom options 1`] = `
+"[foo]
+  asfd = 1
+  bar = [
+    'averyloooooooooooooooooooooooooooooooooooooooooooooooooooong',
+    \\"arrrrrrrrrrrrrrrrrrrrrrrray\\",
+    'thatexceedsthemaximumcolumnwidth'
+  ]
+  bb = 1
+"
+`;
+
+exports[`should > format with default options 1`] = `
 "[foo]
 asfd = 1
+bb = 1
+bar = [
+  'averyloooooooooooooooooooooooooooooooooooooooooooooooooooong',
+  \\"arrrrrrrrrrrrrrrrrrrrrrrray\\",
+  'thatexceedsthemaximumcolumnwidth',
+]
 "
 `;
