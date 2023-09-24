@@ -1,6 +1,5 @@
+import { Taplo } from "@taplo/lib";
 import type { Parser, Printer, SupportLanguage } from "prettier";
-import { doc } from "prettier";
-import { createSyncFn } from "synckit";
 
 import type { AST } from "./types";
 
@@ -8,9 +7,15 @@ const LANGUAGE = "toml";
 const PARSER = "taplo";
 const AST_NAME = "taplo-ast";
 
-const { group } = doc.builders;
+let taplo: Taplo | null = null;
 
-const format = createSyncFn(require.resolve("./worker.cjs"));
+async function format(code: string) {
+	if (!taplo) {
+		taplo = await Taplo.initialize();
+	}
+
+	return taplo.format(code);
+}
 function removeBeginningTrailingNewline(code: string) {
 	code = code.replace(/^(?:\r?\n)+/, "");
 	code = code.replace(/(?:\r?\n)+$/, "");
@@ -18,22 +23,11 @@ function removeBeginningTrailingNewline(code: string) {
 	return code;
 }
 
-const parse: Parser["parse"] = (code): AST => ({
-	type: "Program",
-	code,
-	loc: { start: 0, end: code.length },
-	range: [0, code.length],
-	body: [],
-	comments: [],
-	tokens: [],
+const parse: Parser<AST>["parse"] = async (code) => ({
+	formatted: await format(removeBeginningTrailingNewline(code)),
 });
 
-const print: Printer<AST>["print"] = (path) => {
-	const { code } = path.node;
-	const formatted = format(removeBeginningTrailingNewline(code));
-
-	return group([formatted]);
-};
+const print: Printer<AST>["print"] = ({ node: { formatted } }) => formatted;
 
 export const languages = [
 	{

@@ -26,9 +26,6 @@
 			"types": "./dist/index.d.ts",
 			"require": "./dist/index.cjs",
 			"default": "./dist/index.cjs"
-		},
-		"./worker": {
-			"require": "./dist/worker.cjs"
 		}
 	},
 	"main": "./dist/index.cjs",
@@ -59,8 +56,7 @@
 		"watch": "pkgroll --watch"
 	},
 	"dependencies": {
-		"@taplo/lib": "0.4.0-alpha.2",
-		"synckit": "^0.8.5"
+		"@taplo/lib": "0.4.0-alpha.2"
 	},
 	"devDependencies": {
 		"@antfu/ni": "^0.21.8",

@@ -8,7 +8,7 @@ const testFormat = async (code: string) =>
 	});
 
 describe("should", () => {
-	it("exported", async () => {
+	it("format", async () => {
 		await expect(
 			testFormat(`
 [foo]  
