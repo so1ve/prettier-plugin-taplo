@@ -1,7 +1,7 @@
 {
 	"name": "prettier-plugin-taplo",
 	"version": "0.1.0",
-	"packageManager": "pnpm@8.10.5",
+	"packageManager": "pnpm@8.11.0",
 	"author": "Ray <i@mk1.io> (@so1ve)",
 	"description": "Use taplo to format your TOML files with prettier.",
 	"keywords": [
