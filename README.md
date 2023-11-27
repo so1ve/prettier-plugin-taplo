@@ -1,3 +1,7 @@
+# ⚠⚠⚠ ACHIEVED, moved into https://github.com/un-ts/prettier/tree/master/packages/toml
+
+---
+
 # prettier-plugin-taplo
 
 [![NPM version](https://img.shields.io/npm/v/prettier-plugin-taplo?color=a1b858&label=)](https://www.npmjs.com/package/prettier-plugin-taplo)
